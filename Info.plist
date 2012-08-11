@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>DeMinimizer Plugin</string>
+	<key>CFBundleExecutable</key>
+	<string>DeMinimizer Plugin</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.YTDeMinPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>DeMinimizer Plugin</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>95</string>
+	<key>QSActions</key>
+	<dict>
+		<key>YTDeMinMinimizeWindowsForAppAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>YTDeMinActionProvider</string>
+			<key>actionSelector</key>
+			<string>minimizeWindowsForApp:</string>
+			<key>description</key>
+			<string>Minimize Windows for Application</string>
+			<key>directTypes</key>
+			<array>
+				<string>qs.process</string>
+			</array>
+			<key>name</key>
+			<string>Minimize Windows</string>
+		</dict>
+		<key>YTDeMinRestoreAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>YTDeMinActionProvider</string>
+			<key>actionSelector</key>
+			<string>restoreMinWin:</string>
+			<key>description</key>
+			<string>Restore Minimized Window</string>
+			<key>directTypes</key>
+			<array>
+				<string>YTDeMinWinType</string>
+			</array>
+			<key>name</key>
+			<string>Restore</string>
+		</dict>
+		<key>YTDeMinRestoreByIndexAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>YTDeMinActionProvider</string>
+			<key>actionSelector</key>
+			<string>restoreMinimizedWindowWithIndex:</string>
+			<key>description</key>
+			<string>Restore Minimized Window by Index</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Restore by Index</string>
+		</dict>
+		<key>YTDeMinRestoreWindowsForAppAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>YTDeMinActionProvider</string>
+			<key>actionSelector</key>
+			<string>restoreWindowsForApp:</string>
+			<key>description</key>
+			<string>Restore Windows for Application</string>
+			<key>directTypes</key>
+			<array>
+				<string>qs.process</string>
+			</array>
+			<key>name</key>
+			<string>Restore Windows</string>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>ytrewq1</string>
+		<key>categories</key>
+		<array>
+			<string>System</string>
+		</array>
+		<key>description</key>
+		<string>Restore and minimize windows</string>
+		<key>extendedDescription</key>
+		<string>Adds actions and triggers to minimize and restore windows
+&lt;p&gt;&lt;/p&gt;
+&lt;h3&gt;Setup&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ensure 'Enable access for assistive devices' is enabled in the Universal Access preference pane&lt;/li&gt;
+  &lt;li&gt;Customize the provided triggers appropriately&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Usage&lt;/h3&gt;
+&lt;p&gt;Try the bundled triggers -- three of them are for restoring minimized windows and one of them should minimize all windows.&lt;/p&gt;
+&lt;p&gt;There is also a 'Minimized Windows' proxy object which can be used to observe a list of minimized windows.  The proxy object and individual minimized windows which it resolves to may also be used with the 'Restore Minimized Window' action.&lt;/p&gt;
+&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;icon work - musti
+  &lt;li&gt;testing and ideas - Howard Melman
+&lt;/ul&gt;
+</string>
+		<key>icon</key>
+		<string>DeMinimizer.png</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>YTDeMinActionProvider</key>
+			<string>YTDeMinActionProvider</string>
+		</dict>
+		<key>QSCommands</key>
+		<dict>
+			<key>YTDeMinMinimizeAllWindowsCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directArchive</key>
+					<dict>
+						<key>data</key>
+						<dict>
+							<key>qs.action</key>
+							<dict>
+								<key>actionClass</key>
+								<string>YTDeMinActionProvider</string>
+								<key>actionSelector</key>
+								<string>minimizeWindows</string>
+								<key>icon</key>
+								<string>DeMinMinimizeAll</string>
+								<key>name</key>
+								<string>Minimize All Windows</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>directID</key>
+					<string>YTDeMinMinimizeAllWindows</string>
+				</dict>
+			</dict>
+			<key>YTDeMinRestoreAllMinWindowsCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directArchive</key>
+					<dict>
+						<key>data</key>
+						<dict>
+							<key>qs.action</key>
+							<dict>
+								<key>actionClass</key>
+								<string>YTDeMinActionProvider</string>
+								<key>actionSelector</key>
+								<string>restoreAllMinWindowsAction</string>
+								<key>icon</key>
+								<string>DeMinRestoreAll</string>
+								<key>name</key>
+								<string>Restore All Minimized Windows</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>directID</key>
+					<string>YTDeMinRestoreAllMinWindows</string>
+				</dict>
+			</dict>
+			<key>YTDeMinRestoreFirstMinWindowCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directArchive</key>
+					<dict>
+						<key>data</key>
+						<dict>
+							<key>qs.action</key>
+							<dict>
+								<key>actionClass</key>
+								<string>YTDeMinActionProvider</string>
+								<key>actionSelector</key>
+								<string>restoreFirstMinWindowAction</string>
+								<key>icon</key>
+								<string>DeMinRestoreFirst</string>
+								<key>name</key>
+								<string>Restore First Minimized Window</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>directID</key>
+					<string>YTDeMinRestoreFirstMinWindow</string>
+				</dict>
+			</dict>
+			<key>YTDeMinRestoreLastMinWindowCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directArchive</key>
+					<dict>
+						<key>data</key>
+						<dict>
+							<key>qs.action</key>
+							<dict>
+								<key>actionClass</key>
+								<string>YTDeMinActionProvider</string>
+								<key>actionSelector</key>
+								<string>restoreLastMinWindowAction</string>
+								<key>icon</key>
+								<string>DeMinRestoreLast</string>
+								<key>name</key>
+								<string>Restore Last Minimized Window</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>directID</key>
+					<string>YTDeMinRestoreLastMinWindow</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>YTDeMinObjectSource</key>
+			<string>YTDeMinObjectSource</string>
+		</dict>
+		<key>QSProxies</key>
+		<dict>
+			<key>YTDeMinWindowsProxy</key>
+			<dict>
+				<key>icon</key>
+				<string>DeMinimizer.png</string>
+				<key>name</key>
+				<string>Minimized Windows</string>
+				<key>providerClass</key>
+				<string>YTDeMinObjectSource</string>
+				<key>types</key>
+				<array>
+					<string>YTDeMinWinType</string>
+				</array>
+			</dict>
+		</dict>
+		<key>QSTriggerSets</key>
+		<dict>
+			<key>DeMinimizer</key>
+			<dict>
+				<key>icon</key>
+				<string>DeMinimizer</string>
+				<key>name</key>
+				<string>DeMinimizer</string>
+			</dict>
+		</dict>
+		<key>QSTypeDefinitions</key>
+		<dict>
+			<key>YTDeMinWinType</key>
+			<dict>
+				<key>icon</key>
+				<string>DeMinimizer.png</string>
+				<key>name</key>
+				<string>Minimized Window</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>DeMinimizer</key>
+		<string>[com.blacktree.Quicksilver.YTDeMinPlugIn]:DeMinimizer.png</string>
+	</dict>
+	<key>QSTriggerAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>YTDeMinRestoreLastMinWindowTrigger</string>
+			<key>command</key>
+			<string>YTDeMinRestoreLastMinWindowCommand</string>
+			<key>enabled</key>
+			<true/>
+			<key>name</key>
+			<string>Restore Last Minimized Window</string>
+			<key>set</key>
+			<string>DeMinimizer</string>
+			<key>type</key>
+			<string>QSHotKeyTrigger</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>YTDeMinRestoreFirstMinWindowTrigger</string>
+			<key>command</key>
+			<string>YTDeMinRestoreFirstMinWindowCommand</string>
+			<key>enabled</key>
+			<true/>
+			<key>name</key>
+			<string>Restore First Minimized Window</string>
+			<key>set</key>
+			<string>DeMinimizer</string>
+			<key>type</key>
+			<string>QSHotKeyTrigger</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>YTDeMinRestoreAllMinWindowsTrigger</string>
+			<key>command</key>
+			<string>YTDeMinRestoreAllMinWindowsCommand</string>
+			<key>enabled</key>
+			<true/>
+			<key>name</key>
+			<string>Restore All Minimized Windows</string>
+			<key>set</key>
+			<string>DeMinimizer</string>
+			<key>type</key>
+			<string>QSHotKeyTrigger</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>YTDeMinMinimizeAllWindowsTrigger</string>
+			<key>command</key>
+			<string>YTDeMinMinimizeAllWindowsCommand</string>
+			<key>enabled</key>
+			<true/>
+			<key>name</key>
+			<string>Minimize All Windows</string>
+			<key>set</key>
+			<string>DeMinimizer</string>
+			<key>type</key>
+			<string>QSHotKeyTrigger</string>
+		</dict>
+	</array>
+</dict>
+</plist>

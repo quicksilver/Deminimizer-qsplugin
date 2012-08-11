@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D78CE240A70EC2900CDDD9F /* GetPID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D78CE230A70EC2900CDDD9F /* GetPID.m */; };
+		7DB6C36C0A6E41D9009D19A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		7DB6C3790A6E41E7009D19A7 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3C07F9ACD90056051D /* QSCore.framework */; };
+		7DB6C3C20A6E41ED009D19A7 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3E07F9ACD90056051D /* QSFoundation.framework */; };
+		7DB6C3F70A6E4216009D19A7 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB6C3F60A6E4216009D19A7 /* ApplicationServices.framework */; };
+		7DB6C3FD0A6E42DB009D19A7 /* YTDeMinActionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB6C3FC0A6E42DB009D19A7 /* YTDeMinActionProvider.m */; };
+		7DD134AC0A70BAE8000AF8AE /* DeMinimizer.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DD134AB0A70BAE8000AF8AE /* DeMinimizer.png */; };
+		7DD866D00A8B686F00BA260B /* YTDeMinObjectSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD866CF0A8B686F00BA260B /* YTDeMinObjectSource.m */; };
+		7DF214DA0A942BC300023F24 /* YTDeMin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF214D90A942BC300023F24 /* YTDeMin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D78CE220A70EC2900CDDD9F /* GetPID.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GetPID.h; sourceTree = "<group>"; };
+		7D78CE230A70EC2900CDDD9F /* GetPID.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GetPID.m; sourceTree = "<group>"; };
+		7DB6C35F0A6E417F009D19A7 /* DeMinimizer Plugin.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DeMinimizer Plugin.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DB6C3F60A6E4216009D19A7 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		7DB6C3FB0A6E42DB009D19A7 /* YTDeMinActionProvider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = YTDeMinActionProvider.h; sourceTree = "<group>"; };
+		7DB6C3FC0A6E42DB009D19A7 /* YTDeMinActionProvider.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = YTDeMinActionProvider.m; sourceTree = "<group>"; };
+		7DD134AB0A70BAE8000AF8AE /* DeMinimizer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeMinimizer.png; sourceTree = "<group>"; };
+		7DD866CE0A8B686F00BA260B /* YTDeMinObjectSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTDeMinObjectSource.h; sourceTree = "<group>"; };
+		7DD866CF0A8B686F00BA260B /* YTDeMinObjectSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTDeMinObjectSource.m; sourceTree = "<group>"; };
+		7DF214D80A942BC300023F24 /* YTDeMin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = YTDeMin.h; sourceTree = "<group>"; };
+		7DF214D90A942BC300023F24 /* YTDeMin.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = YTDeMin.m; sourceTree = "<group>"; };
+		7F35FF3C07F9ACD90056051D /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F35FF3E07F9ACD90056051D /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FFA8E9C0816CCCA00A858CD /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FFA8E9D0816CCCA00A858CD /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CD72FDDA15D7083E0064FAC8 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		CD72FDDB15D7083E0064FAC8 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		CD72FDDC15D7083E0064FAC8 /* Developer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		CD72FDDD15D7083E0064FAC8 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		CD72FDDE15D7083E0064FAC8 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		CD72FDDF15D7083E0064FAC8 /* Quicksilver.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quicksilver.pch; sourceTree = "<group>"; };
+		CD72FDE015D7083E0064FAC8 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DB6C35D0A6E417F009D19A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DB6C36C0A6E41D9009D19A7 /* Cocoa.framework in Frameworks */,
+				7DB6C3790A6E41E7009D19A7 /* QSCore.framework in Frameworks */,
+				7DB6C3C20A6E41ED009D19A7 /* QSFoundation.framework in Frameworks */,
+				7DB6C3F70A6E4216009D19A7 /* ApplicationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* YTDeMinPlugIn */ = {
+			isa = PBXGroup;
+			children = (
+				CD72FDD915D7083E0064FAC8 /* Configuration */,
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = YTDeMinPlugIn;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+				7DD134AB0A70BAE8000AF8AE /* DeMinimizer.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DB6C35F0A6E417F009D19A7 /* DeMinimizer Plugin.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DB6C3F60A6E4216009D19A7 /* ApplicationServices.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+				7F35FF3C07F9ACD90056051D /* QSCore.framework */,
+				7F35FF3E07F9ACD90056051D /* QSFoundation.framework */,
+				7FFA8E9C0816CCCA00A858CD /* QSEffects.framework */,
+				7FFA8E9D0816CCCA00A858CD /* QSInterface.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7DB6C3FC0A6E42DB009D19A7 /* YTDeMinActionProvider.m */,
+				7DB6C3FB0A6E42DB009D19A7 /* YTDeMinActionProvider.h */,
+				7DD866CF0A8B686F00BA260B /* YTDeMinObjectSource.m */,
+				7DD866CE0A8B686F00BA260B /* YTDeMinObjectSource.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7DF214D80A942BC300023F24 /* YTDeMin.h */,
+				7DF214D90A942BC300023F24 /* YTDeMin.m */,
+				7D78CE220A70EC2900CDDD9F /* GetPID.h */,
+				7D78CE230A70EC2900CDDD9F /* GetPID.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		CD72FDD915D7083E0064FAC8 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CD72FDDA15D7083E0064FAC8 /* Common.xcconfig */,
+				CD72FDDB15D7083E0064FAC8 /* Debug.xcconfig */,
+				CD72FDDC15D7083E0064FAC8 /* Developer.xcconfig */,
+				CD72FDDD15D7083E0064FAC8 /* QSPlugIn.xcconfig */,
+				CD72FDDE15D7083E0064FAC8 /* QSPlugIn_Release.xcconfig */,
+				CD72FDDF15D7083E0064FAC8 /* Quicksilver.pch */,
+				CD72FDE015D7083E0064FAC8 /* Release.xcconfig */,
+			);
+			name = Configuration;
+			path = /private/tmp/QS/Configuration;
+			sourceTree = "<absolute>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DB6C35E0A6E417F009D19A7 /* DeMinimizer Module */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DB6C3610A6E4180009D19A7 /* Build configuration list for PBXNativeTarget "DeMinimizer Module" */;
+			buildPhases = (
+				7DB6C3650A6E41A9009D19A7 /* Update Version and Documentation */,
+				7DB6C35B0A6E417F009D19A7 /* Resources */,
+				7DB6C35C0A6E417F009D19A7 /* Sources */,
+				7DB6C35D0A6E417F009D19A7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DeMinimizer Module";
+			productName = "DeMinimizer Module";
+			productReference = 7DB6C35F0A6E417F009D19A7 /* DeMinimizer Plugin.qsplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7F6B3EEF085CE8DF000735A8 /* Build configuration list for PBXProject "YTDeMinPlugIn" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0259C574FE90428111CA0C5A /* YTDeMinPlugIn */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DB6C35E0A6E417F009D19A7 /* DeMinimizer Module */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DB6C35B0A6E417F009D19A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DD134AC0A70BAE8000AF8AE /* DeMinimizer.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DB6C3650A6E41A9009D19A7 /* Update Version and Documentation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Version and Documentation";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$QS_BUILD_ROOT/Tools/bltrversion\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DB6C35C0A6E417F009D19A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D78CE240A70EC2900CDDD9F /* GetPID.m in Sources */,
+				7DB6C3FD0A6E42DB009D19A7 /* YTDeMinActionProvider.m in Sources */,
+				7DD866D00A8B686F00BA260B /* YTDeMinObjectSource.m in Sources */,
+				7DF214DA0A942BC300023F24 /* YTDeMin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7DB6C3620A6E4180009D19A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD72FDDD15D7083E0064FAC8 /* QSPlugIn.xcconfig */;
+			buildSettings = {
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "";
+				PRODUCT_NAME = "DeMinimizer Plugin";
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			name = Debug;
+		};
+		7DB6C3630A6E4180009D19A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD72FDDD15D7083E0064FAC8 /* QSPlugIn.xcconfig */;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "";
+				PRODUCT_NAME = "DeMinimizer Plugin";
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			name = Release;
+		};
+		7F6B3EF0085CE8DF000735A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD72FDDB15D7083E0064FAC8 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		7F6B3EF1085CE8DF000735A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD72FDE015D7083E0064FAC8 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DB6C3610A6E4180009D19A7 /* Build configuration list for PBXNativeTarget "DeMinimizer Module" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DB6C3620A6E4180009D19A7 /* Debug */,
+				7DB6C3630A6E4180009D19A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F6B3EEF085CE8DF000735A8 /* Build configuration list for PBXProject "YTDeMinPlugIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6B3EF0085CE8DF000735A8 /* Debug */,
+				7F6B3EF1085CE8DF000735A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}
