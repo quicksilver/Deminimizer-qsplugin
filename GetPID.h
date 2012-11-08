@@ -81,7 +81,7 @@ enum	{kSuccess = 0,
 int GetAllPIDsForProcessName(const char* ProcessName,
                              pid_t ArrayOfReturnedPIDs[],
                              const unsigned int NumberOfPossiblePIDsInArray,
-                             unsigned int* NumberOfMatchesFound,
+                             int* NumberOfMatchesFound,
                              int* SysctlError); //Can be NULL
 
 /*****************************************************

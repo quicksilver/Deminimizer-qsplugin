@@ -39,7 +39,6 @@
 		CD72FDDB15D7083E0064FAC8 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		CD72FDDC15D7083E0064FAC8 /* Developer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
 		CD72FDDD15D7083E0064FAC8 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
-		CD72FDDE15D7083E0064FAC8 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
 		CD72FDDF15D7083E0064FAC8 /* Quicksilver.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quicksilver.pch; sourceTree = "<group>"; };
 		CD72FDE015D7083E0064FAC8 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -132,7 +131,6 @@
 				CD72FDDB15D7083E0064FAC8 /* Debug.xcconfig */,
 				CD72FDDC15D7083E0064FAC8 /* Developer.xcconfig */,
 				CD72FDDD15D7083E0064FAC8 /* QSPlugIn.xcconfig */,
-				CD72FDDE15D7083E0064FAC8 /* QSPlugIn_Release.xcconfig */,
 				CD72FDDF15D7083E0064FAC8 /* Quicksilver.pch */,
 				CD72FDE015D7083E0064FAC8 /* Release.xcconfig */,
 			);

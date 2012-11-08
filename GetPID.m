@@ -70,7 +70,7 @@
 int GetAllPIDsForProcessName(const char* ProcessName, 
                              pid_t ArrayOfReturnedPIDs[], 
                              const unsigned int NumberOfPossiblePIDsInArray, 
-                             unsigned int* NumberOfMatchesFound,
+                             int* NumberOfMatchesFound,
                              int* SysctlError)
 {
     // --- Defining local variables for this function and initializing all to zero --- //
@@ -165,7 +165,7 @@ int GetAllPIDsForProcessName(const char* ProcessName,
         * Return Value: a return value indicating success or failure.  Actually, sysctl will either return
         *     zero on no error and -1 on error.  The errno UNIX variable will be set on error.
         */ 
-        error = sysctl(mib, 3, NULL, &sizeOfBufferRequired, NULL, NULL);
+        error = sysctl(mib, 3, NULL, &sizeOfBufferRequired, NULL, 0);
 
         /* If an error occurred then return the accociated error.  The error itself actually is stored in the UNIX 
         * errno variable.  We can access the errno value using the errno global variable.  We will return the 
@@ -216,7 +216,7 @@ int GetAllPIDsForProcessName(const char* ProcessName,
         * Return Value: a return value indicating success or failure.  Actually, sysctl will either return 
         *     zero on no error and -1 on error.  The errno UNIX variable will be set on error.
         */ 
-        error = sysctl(mib, 3, BSDProcessInformationStructure, &sizeOfBufferRequired, NULL, NULL);
+        error = sysctl(mib, 3, BSDProcessInformationStructure, &sizeOfBufferRequired, NULL, 0);
     
         //Here we successfully got the process information.  Thus set the variable to end this sysctl calling loop
         if (error == 0)
@@ -251,7 +251,7 @@ int GetAllPIDsForProcessName(const char* ProcessName,
      * Note we limit the compairison to MAXCOMLEN which is the maximum length of a BSD process name which is used
      * by the system. 
      */
-    for (Counter = 0 ; Counter < NumberOfRunningProcesses ; Counter++)
+    for (Counter = 0 ; (long)  Counter < NumberOfRunningProcesses ; Counter++)
     {
         //Getting PID of process we are examining
         CurrentExaminedProcessPID = BSDProcessInformationStructure[Counter].kp_proc.p_pid; 
@@ -263,7 +263,7 @@ int GetAllPIDsForProcessName(const char* ProcessName,
            && ((strncmp(CurrentExaminedProcessName, ProcessName, MAXCOMLEN) == 0))) //name matches
         {	
             // --- Got a match add it to the array if possible --- //
-            if ((*NumberOfMatchesFound + 1) > NumberOfPossiblePIDsInArray)
+            if ((*NumberOfMatchesFound + 1) > (int) NumberOfPossiblePIDsInArray)
             {
                 //if we overran the array buffer passed we release the allocated buffer give an error.
                 free(BSDProcessInformationStructure);

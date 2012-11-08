@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.0</string>
 	<key>CFBundleVersion</key>
-	<string>95</string>
+	<string>9F</string>
 	<key>QSActions</key>
 	<dict>
 		<key>YTDeMinMinimizeWindowsForAppAction</key>
@@ -94,22 +94,22 @@
 		<key>description</key>
 		<string>Restore and minimize windows</string>
 		<key>extendedDescription</key>
-		<string>Adds actions and triggers to minimize and restore windows
-&lt;p&gt;&lt;/p&gt;
-&lt;h3&gt;Setup&lt;/h3&gt;
+		<string>&lt;h3&gt;DeMinimizer Plugin&lt;/h3&gt;
+&lt;p&gt;Adds actions and triggers to minimize and restore windows&lt;/p&gt;
+&lt;h4&gt;Setup&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;Ensure 'Enable access for assistive devices' is enabled in the Universal Access preference pane&lt;/li&gt;
-  &lt;li&gt;Customize the provided triggers appropriately&lt;/li&gt;
+&lt;li&gt;Ensure 'Enable access for assistive devices' is enabled in the Universal Access preference pane&lt;/li&gt;
+&lt;li&gt;Customize the provided triggers appropriately&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Usage&lt;/h3&gt;
-&lt;p&gt;Try the bundled triggers -- three of them are for restoring minimized windows and one of them should minimize all windows.&lt;/p&gt;
+&lt;h4&gt;Usage&lt;/h4&gt;
+&lt;p&gt;Try the bundled triggers -- three of them are for restoring minimized windows and one of them should minimize all windows.&lt;br&gt;
+&lt;/p&gt;
 &lt;p&gt;There is also a 'Minimized Windows' proxy object which can be used to observe a list of minimized windows.  The proxy object and individual minimized windows which it resolves to may also be used with the 'Restore Minimized Window' action.&lt;/p&gt;
-&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;h4&gt;Acknowledgements&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;icon work - musti
-  &lt;li&gt;testing and ideas - Howard Melman
-&lt;/ul&gt;
-</string>
+&lt;li&gt;icon work - musti&lt;/li&gt;
+&lt;li&gt;testing and ideas - Howard Melman&lt;/li&gt;
+&lt;/ul&gt;</string>
 		<key>icon</key>
 		<string>DeMinimizer.png</string>
 	</dict>

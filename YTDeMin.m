@@ -22,7 +22,7 @@ NSArray* YTDeMinMinimizedWindows()
     NSEnumerator *windowEnumerator = nil;
     NSArray *windows = nil;
     id window = nil;
-    AXError ourError = nil;
+    AXError ourError = 0;
     NSMutableArray *minWins = [NSMutableArray array];
     NSArray *names = nil;
     CFBooleanRef minimized;
@@ -85,7 +85,7 @@ NSArray* YTDeMinWindowsForAppWithBundleId(NSString* bundleId)
         NSLog(@"Error: failed to obtain UIElement for app: %@", bundleId);
         return nil;
     }
-    AXError ourError = nil;
+    AXError ourError = 0;
     NSArray *windowList = nil;
     // XXX: fn name has 'Copy', must release?
     ourError = AXUIElementCopyAttributeValue(appElementRef, kAXWindowsAttribute, (CFTypeRef *)&windowList);
@@ -121,7 +121,7 @@ BOOL YTDeMinMinimizeWindowsForAppWithBundleId(NSString* bundleId)
         return NO;
     }
     id window = nil;
-    AXError ourError = nil;
+    AXError ourError = 0;
     AXUIElementRef minButton = nil;
     NSEnumerator *windowEnumerator = [windows objectEnumerator];
     while (window = [windowEnumerator nextObject]) {
@@ -154,7 +154,7 @@ BOOL YTDeMinRestoreWindowsForAppWithBundleId(NSString* bundleId)
         return NO;
     }
     id window = nil;
-    AXError ourError = nil;
+    AXError ourError = 0;
     NSArray *names = nil;
     CFBooleanRef minimized;
     NSEnumerator *windowEnumerator = [windows objectEnumerator];
@@ -200,12 +200,7 @@ BOOL YTDeMinMinimizeWindows()
     NSArray *la = [ws launchedApplications];
     NSEnumerator *appEnumerator = [la objectEnumerator];
     NSDictionary *app = nil;
-    int pid;
-    AXUIElementRef appElementRef = nil;
     NSString *bundleId;
-    NSEnumerator *windowEnumerator = nil;
-    id window;
-    AXUIElementRef minButton = nil;
     while (app = (NSDictionary*)[appEnumerator nextObject]) {
         bundleId = [app objectForKey:@"NSApplicationBundleIdentifier"];
         if (!YTDeMinMinimizeWindowsForAppWithBundleId(bundleId)) {
