@@ -10,8 +10,8 @@
 NSArray* YTDeMinMinimizedWindows()
 {
     if (!AXAPIEnabled()) {
-        NSBeep();
         NSLog(@"Accessibilty is not enabled -- see Universal Access Pref Pane in System Preferences");
+        QSShowAppNotifWithAttributes(@"DeminimizerPlugin", @"DeMinimizer Plugin", NSLocalizedStringFromTableInBundle(@"Accessibilty is not enabled", nil, [NSBundle bundleForClass:NSClassFromString(@"YTDeMin")], @""));
         return nil;
     }
     NSWorkspace *ws = [NSWorkspace sharedWorkspace];
